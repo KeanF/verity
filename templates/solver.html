@@ -1,0 +1,141 @@
+<!-- TODO create assets for shapes, favicon -->
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <script src="{% static 'solver.js' %}" defer></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'solver.css'%}">
+</head>
+
+<body>
+    <div class="root">
+        <h1>Salvation's Edge: Verity Solver</h1>
+
+        <!-- TODO Add text explaining the encounter -->
+        <!-- <div name="overview">
+            <button id="overview">Show Encounter Overview</button>
+        </div> -->
+
+        <div class="button-group-container">
+            <button id="challenge" class="challenge-inactive">Challenge Inactive</button>
+            <button id="images">Show Images</button>
+            <button id="reset">Reset Callouts</button>
+        </div>
+
+        <div id="inside" class="callout">
+            <h2>Inside Callout</h2>
+            <div class="button-group-container">
+                <div>
+                    <h3>Left Statue</h3>
+                    <div id="inside-left" class="button-group">
+                        <button value="c" name="inside-left-circle">
+                            <span>CIRCLE</span>
+                            <img src="{% static 'assets/circle.svg' %}" alt="circle">
+                        </button>
+                        <button value="s" name="inside-left-square">
+                            <span>SQUARE</span>
+                            <img src="{% static 'assets/square.svg' %}" alt="square">
+                        </button>
+                        <button value="t" name="inside-left-triangle">
+                            <span>TRIANGLE</span>
+                            <img src="{% static 'assets/triangle.svg' %}" alt="triangle">
+                        </button>
+                    </div>
+                </div>
+                <div>
+                    <h3>Middle Statue</h3>
+                    <div id="inside-mid" class="button-group">
+                        <button value="c" name="inside-mid-circle">
+                            <span>CIRCLE</span>
+                            <img src="{% static 'assets/circle.svg' %}" alt="circle">
+                        </button>
+                        <button value="s" name="inside-mid-square">
+                            <span>SQUARE</span>
+                            <img src="{% static 'assets/square.svg' %}" alt="square">
+                        </button>
+                        <button value="t" name="inside-mid-triangle">
+                            <span>TRIANGLE</span>
+                            <img src="{% static 'assets/triangle.svg' %}" alt="triangle">
+                        </button>
+                    </div>
+                </div>
+                <!-- MAYBE display the third shape after it can be inferred? -->
+            </div>
+        </div>
+        <div id="outside" class="callout">
+            <h2>Outside Callout</h2>
+            <div class="button-group-container">
+                <div>
+                    <h3>Left Statue</h3>
+                    <div id="outside-left" class="button-group">
+                        <button value="ct" name="outside-left-cone">
+                            <span>CONE</span>
+                            <img src="{% static 'assets/cone.svg' %}" alt="cone">
+                        </button>
+                        <button value="ss" name="outside-left-cube">
+                            <span>CUBE</span>
+                            <img src="{% static 'assets/cube.svg' %}" alt="cube">
+                        </button>
+                        <button value="cs" name="outside-left-cylinder">
+                            <span>CYLINDER</span>
+                            <img src="{% static 'assets/cylinder.svg' %}" alt="cylinder">
+                        </button>
+                        <button value="tt" name="outside-left-pyramid">
+                            <span>PYRAMID</span>
+                            <img src="{% static 'assets/pyramid.svg' %}" alt="pyramid">
+                        </button>
+                        <button value="st" name="outside-left-prism">
+                            <span>PRISM</span>
+                            <img src="{% static 'assets/prism.svg' %}" alt="prism">
+                        </button>
+                        <button value="cc" name="outside-left-sphere">
+                            <span>SPHERE</span>
+                            <img src="{% static 'assets/sphere.svg' %}" alt="sphere">
+                        </button>
+                    </div>
+                    <!-- MAYBE display third shape after it can be inferred? -->
+                </div>
+                <div>
+                    <h3>Middle Statue</h3>
+                    <div id="outside-mid" class="button-group">
+                        <button value="ct" name="outside-mid-cone">
+                            <span>CONE</span>
+                            <img src="{% static 'assets/cone.svg' %}" alt="cone">
+                        </button>
+                        <button value="ss" name="outside-mid-cube">
+                            <span>CUBE</span>
+                            <img src="{% static 'assets/cube.svg' %}" alt="cube">
+                        </button>
+                        <button value="cs" name="outside-mid-cylinder">
+                            <span>CYLINDER</span>
+                            <img src="{% static 'assets/cylinder.svg' %}" alt="cylinder">
+                        </button>
+                        <button value="tt" name="outside-mid-pyramid">
+                            <span>PYRAMID</span>
+                            <img src="{% static 'assets/pyramid.svg' %}" alt="pyramid">
+                        </button>
+                        <button value="st" name="outside-mid-prism">
+                            <span>PRISM</span>
+                            <img src="{% static 'assets/prism.svg' %}" alt="prism">
+                        </button>
+                        <button value="cc" name="outside-mid-sphere">
+                            <span>SPHERE</span>
+                            <img src="{% static 'assets/sphere.svg' %}" alt="sphere">
+                        </button>
+                    </div>
+                    <!-- MAYBE display third shape after it can be inferred? -->
+                </div>
+            </div>
+        </div>
+        <div>
+            <h2>Solution</h2>
+            <div id="solution" class="solution-box">
+                <p>Awaiting inside callouts</p>
+                <p>Awaiting outside callouts</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,104 @@
+/*
+Make shit pretty later
+----
+background: 181818
+button (normal): 1f1f1f
+button (selected): 000000
+text: ffffff
+
+border: check this out https://devdevout.com/css/css-gradient-buttons
+*/
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #363636;
+    color: #ffffff;
+    display: flex;
+    place-items: center;
+    color-scheme: light dark;
+    min-width: 320px;
+    min-height: 100vh;
+}
+
+.root {
+    margin: 0 auto;
+    padding: 10px;
+    text-align: center;
+}
+
+h1, h2 {
+    margin-top: 24px;
+}
+
+h3 {
+    margin-top: 0px;
+    font-weight: lighter;
+}
+
+.button-group-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+  }
+
+.button-group {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 8px;
+}
+
+.button-group button {
+    grid-column: span 2;
+}
+
+.button-group button:nth-last-child(1):nth-child(odd) {
+    grid-column: 2 / span 2;
+}
+
+button {
+    display: flex;
+    align-items: center;
+    align-content: space-evenly;
+    gap: 10px;
+    justify-content: center;
+    background-color: #202020;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    padding: 10px 10px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+button:hover {
+    border: 1px solid;
+    border-color: rgb(0, 153, 255);
+    transition: 250ms;
+}
+
+.active {
+    background-color: #000;
+}
+
+.challenge-inactive {
+    background-color: #942217;
+}
+
+.challenge-active {
+    background-color: #0b450b;
+}
+
+img {
+    max-width: 30px;
+    max-height: 30px;
+    display: none;
+}
+
+.solution-box {
+    background-color: #202020;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: 550;
+}
